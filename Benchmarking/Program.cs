@@ -8,25 +8,25 @@ namespace Benchmarking
     {
         static void Main()
         {
-            var summary = BenchmarkRunner.Run<StringExtBenchmark>();
+            BenchmarkRunner.Run<StringExtBenchmark>();
         }
     }
 
     public class StringExtBenchmark
     {
-        private const string input =
+        private const string Input =
             "lORem ipsUm dolor sit AMET, conSEctetur adIpisCING elit Mauris vehicula elEmenTum dolor vitae tiNCidunt.";
 
         [Benchmark(Baseline = true)]
         public int ToSentenceCaseInitial()
         {
-            return input.ToSentenceCaseInitial().Length;
+            return Input.ToSentenceCaseInitial().Length;
         }
 
         [Benchmark]
         public int ToSentenceCase()
         {
-            return input.ToSentenceCase().Length;
+            return Input.ToSentenceCase().Length;
         }
     }
 }
