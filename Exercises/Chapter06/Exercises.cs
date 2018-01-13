@@ -1,8 +1,6 @@
 ﻿using LaYumba.Functional;
 using System;
 using FluentAssertions;
-using Microsoft.AspNetCore.Razor.Language.Intermediate;
-using NSubstitute;
 using NUnit.Framework;
 
 namespace Exercises.Chapter6
